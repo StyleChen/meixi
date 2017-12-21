@@ -1,0 +1,283 @@
+:root {
+  --form-label-margin: calc(20 / 14 * 1em);
+  --form-control-normal-size: calc(280 / 14 * 1em);
+  --form-line-height: calc(40 / 14);
+  --form-focus-color: color(var(--theme) alpha(30%));
+  --form-spacing: calc(10 / 14 * 1em);
+  --form-file-size: calc(100 / 14 * 1em);
+}
+
+.form:first-child {
+  margin-top: calc(60 / 16 * 1em);
+}
+
+.form-fieldset {
+  appearance: none;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+/* 表单组 */
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(20 / 14 * 1em);
+  font-size: calc(14 / 16 * 1rem);
+}
+
+.form-group .form-group {
+  margin: 0 0 calc(10 / 14 * 1em) 0;
+}
+
+/* label */
+.form-label {
+  display: inline-block; /* ie */
+  align-self: flex-start;
+  margin: 0 var(--form-label-margin);
+  line-height: var(--form-line-height);
+  text-align: right;
+}
+
+.form-label--required::after {
+  content: "*";
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  width: 0.5em;
+  margin-right: -0.5em;
+  color: var(--theme);
+}
+
+/* 输入框 */
+.form-control {
+  width: var(--form-control-normal-size);
+  height: calc(var(--form-line-height) * 1em);
+  padding: 0 1em;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.form-control:focus {
+  border-color: var(--form-focus-color);
+  box-shadow: 0 0 3px var(--form-focus-color);
+  outline: 0;
+}
+
+.form-control--md {
+  width: calc(130 / 14 * 1em);
+}
+
+input.form-control--md {
+  width: calc(130 / 14 * 1em);
+}
+
+.form-control--sm {
+  width: calc(80 / 14 * 1em);
+}
+
+input + .form-control,
+label:not(.form-label) + .form-control {
+  margin-left: var(--form-spacing);
+}
+
+/* 补足 */
+.form-control + .form-complement {
+  margin-left: var(--form-spacing);
+}
+
+.form-complement + .form-control {
+  margin-left: var(--form-spacing);
+}
+
+/* 验证 */
+.form-error {
+  display: none;
+  margin-left: var(--form-spacing);
+  color: var(--theme);
+}
+
+[data-dirty][data-valid="false"] ~ .form-error {
+  display: block;
+}
+
+.form-error .icon {
+  font-size: calc(18 / 14 * 1em);
+}
+
+.form-ok {
+  display: none;
+  margin-left: var(--form-spacing);
+  color: var(--success);
+}
+
+[data-dirty][data-valid="true"] ~ .form-ok {
+  display: block;
+}
+
+.form-ok .icon {
+  font-size: calc(16 / 14 * 1em);
+}
+
+.form-error .icon,
+.form-ok .icon {
+  margin-right: 5px;
+}
+
+/* 附带操作 */
+.form-group__button {
+  padding: 0;
+  margin-left: var(--form-spacing);
+  border: 0;
+  background-color: transparent;
+  color: #aaa;
+}
+
+.form-group__button--success:hover {
+  color: var(--success);
+}
+
+.form-group__button--danger:hover {
+  color: var(--theme);
+}
+
+.form-group__button .icon {
+  font-size: calc(18 / 14 * 1em);
+}
+
+/* 说明文字 */
+.form-info {
+  margin-top: calc(10 / 12 * 1em);
+  font-size: calc(12 / 14 * 1em);
+  color: var(--grey-lighter);
+}
+
+.form-info > em {
+  font-style: normal;
+  color: var(--theme);
+}
+
+/* 文本框与按钮组合 */
+.form-input-btn {
+  display: flex;
+  width: var(--form-control-normal-size);
+}
+
+.form-input-btn > .form-control {
+  flex: 1;
+}
+
+.form-input-btn > button {
+  flex-shrink: 0;
+  margin-left: calc(5 / 14 * 1em);
+}
+
+/* 下拉框 */
+.form-select {
+  position: relative;
+  display: inline-block;
+}
+
+.form-select + .form-select,
+input + .form-select,
+label:not(.form-label) + .form-select {
+  margin-left: var(--form-spacing);
+}
+
+.form-select > select {
+  padding-right: 0; /* ie */
+}
+
+@supports (appearance: none) {
+  .form-select > select {
+    appearance: none;
+    padding-right: calc(26 / 14 * 1em);
+  }
+
+  .form-select::after {
+    content: "";
+    position: absolute;
+    right: calc(8 / 14 * 1em);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-width: calc(5 / 14 * 1em);
+    border-bottom-width: 0;
+    border-style: solid;
+    border-color: #aaa transparent transparent;
+  }
+}
+
+/* 单选框和复选框 */
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-left: calc(8 / 14 * 1em);
+}
+
+.form-check + .form-check {
+  margin-left: calc(40 / 14 * 1em);
+}
+
+.form-check > label {
+  margin-left: calc(10 / 14 * 1em);
+}
+
+/* 多行文本框 */
+textarea.form-control {
+  width: calc(420 / 14 * 1em);
+  height: calc(140 / 14 * 1em);
+  padding: 1em;
+}
+
+/* 图片上传 */
+.form-file {
+  display: flex;
+}
+
+.form-file__list {
+  @apply --unstyle-list;
+
+  display: flex;
+}
+
+.form-file__list > img {
+  width: var(--form-file-size);
+  height: var(--form-file-size);
+  border: 1px solid var(--grey-lightest);
+  border-radius: 5px;
+  margin-right: calc(10 / 14 * 1em);
+  object-fit: contain;
+  object-position: center;
+}
+
+.form-file__picker {
+  position: relative;
+  width: var(--form-file-size);
+  height: var(--form-file-size);
+  border: 1px solid var(--grey-lightest);
+  border-radius: 5px;
+}
+
+.webuploader-pick {
+  @apply --flex-center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.webuploader-pick > .icon {
+  color: var(--grey-lightest);
+  font-size: calc(30 / 14 * 1em);
+}
+
+.webuploader-element-invisible {
+  display: none;
+}
+
+/* 按钮 */
+.form-btn-wrapper {
+  margin-top: calc(20 / 14 * 1em);
+  font-size: calc(14 / 16 * 1em);
+}

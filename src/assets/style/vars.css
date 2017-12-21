@@ -1,0 +1,31 @@
+:root {
+  --site-width: calc(1200 / 16 * 1rem);
+  --theme: #d6000f;
+  --success: #8cc051;
+  --warning: #f4ba4e;
+  --grey: #666;
+  --grey-lighter: #999;
+  --grey-lightest: #e3e4e5;
+  --grey-bg: #edeff1;
+  --form-label-margin: calc(20 / 14 * 1em);
+  --border: #DCDCDC;
+  --wrap: 1200px;
+
+  --flex-center: {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  };
+
+  --ellipsis: {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  };
+
+  --unstyle-list: {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}

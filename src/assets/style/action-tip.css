@@ -1,0 +1,38 @@
+.action-tip {
+  padding: 0 calc(10 / 12 * 1em);
+  border: 1px solid #f5cbce;
+  margin: calc(8 / 12 * 1em) 0 calc(20 / 12 * 1em);
+  background-color: #faedee;
+  font-size: calc(12 / 16 * 1rem);
+  line-height: calc(32 / 12 * 1em);
+}
+
+.action-tip .icon {
+  margin-right: calc(5 / 22 * 1em);
+  color: var(--success);
+  font-size: calc(22 / 16 * 1em);
+}
+
+/* 动画效果 */
+.action-tip {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.action-tip--active {
+  animation-name: fadeInOut;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+}
+
+@keyframes fadeInOut {
+  35% {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,95 @@
+/* 普通按钮 */
+.btn {
+  min-width: calc(140 / 14 * 1em);
+  height: calc(45 / 14 * 1em);
+  padding: 0 calc(10 / 14 * 1em);
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  background-color: currentColor;
+  color: var(--theme);
+}
+
+.btn + .btn {
+  margin-left: calc(10 / 14 * 1em); /* 临时 */
+}
+
+.btn::first-line {
+  color: #fff;
+}
+
+.btn--warning {
+  color: var(--warning);
+}
+
+.btn--bare {
+  color: #c4c4c4;
+}
+
+/* 表格按钮 */
+.table-btn {
+  width: calc(88 / 12 * 1em);
+  height: calc(30 / 12 * 1em);
+  border: 1px solid #ddd;
+  border-radius: calc(30 / 12 * 1em);
+  background-color: transparent;
+}
+
+.table-btn + .table-btn {
+  margin-left: calc(4 / 12 * 1em);
+}
+
+.table-btn--bare {
+  color: var(--theme);
+}
+
+.table-btn--danger {
+  color: var(--theme);
+}
+
+.table-btn--success {
+  color: var(--success);
+}
+
+.table-btn--warning {
+  color: var(--warning);
+}
+
+.table-btn .icon {
+  margin-right: 3px;
+  font-size: calc(15 / 12 * 1em);
+  vertical-align: text-bottom;
+}
+
+.table-btn--bare:not(:hover) .icon {
+  color: var(--grey-lighter);
+}
+
+.table-btn .icon + span {
+  color: var(--grey-lighter);
+}
+
+.table-btn:hover {
+  border-color: currentColor;
+}
+
+.table-btn:hover .icon + span {
+  color: currentColor;
+}
+
+/* 图标视觉对齐 */
+.table-btn .icon-vip {
+  top: 1px;
+}
+/*左侧按钮*/
+.button{
+  text-align: center;
+}
+.button button{
+  border:none;
+  color:white;
+  background:#f4ba4e;
+  width:80%;
+  height:40px;
+  border-radius: 5px;
+  outline:none;
+}

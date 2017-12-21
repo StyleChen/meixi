@@ -1,0 +1,56 @@
+/* 普通表格  */
+
+.table {
+  border-collapse: collapse;
+  font-size: calc(12 / 16 * 1rem);
+  border: var(--table-border);
+  margin-bottom: 1rem;
+  /* 临时 */
+}
+
+.table tr {
+  border-bottom: var(--table-border);
+  text-align: center;
+}
+
+.table tbody tr:hover {
+  background-color: #faedee;
+  color: var(--theme);
+}
+
+.table th {
+  height: calc(46 / 12 * 1em);
+  background-color: var(--grey-bg);
+  font-weight: normal;
+}
+
+.table td {
+  height: calc(54 / 12 * 1em);
+}
+
+/* 表格内图文商品 */
+.table-item {
+  display: flex;
+  padding: calc(15 / 12 * 1em);
+}
+
+.table-item__pic {
+  width: calc(70 / 12 * 1em);
+  height: calc(70 / 12 * 1em);
+  margin-right: calc(10 / 12 * 1em);
+}
+
+.table-item__info {
+  line-height: calc(20 / 12);
+  text-align: left;
+}
+
+.table-item__title {
+  margin: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+.table-item__desc {
+  color: var(--grey-lighter);
+}

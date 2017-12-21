@@ -1,0 +1,103 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  background-color: var(--grey-bg);
+  color: #333;
+  font-family: sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+select,
+textarea,
+button {
+  font-size: inherit;
+}
+
+.iconfont {
+  font-family: "iconfont", sans-serif !important;
+  font-size: inherit;
+
+  /* 视觉对齐  */
+  position: relative;
+  top: 2px;
+}
+
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.float-right {
+  float: right;
+}
+.float-left {
+  float: left;
+}
+.userWrap {
+  padding-top: 30px;
+}
+tr.ivu-table-row-hover td {
+  color: var(--theme);
+  background-color: #faedee;
+}
+.ivu-input-group {
+  float: left;
+  width: 285px;
+  height: 40px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.ivu-input-group .ivu-input{
+  height: 40px;
+  width: calc(100% + 20px);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  position: relative;
+  left: -20px;
+  padding-left: 25px;
+}
+.ivu-input-group-append,
+.ivu-input-group-prepend {
+  overflow: hidden;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+  background: var(--theme);
+  width: 40px;
+  position: relative;
+  z-index: 3;
+}
+.ivu-btn.ivu-btn-icon-only {
+  font-size: 15px;
+  padding: 0;
+  color: #fff !important;
+}
+.userAction {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+.ivu-page-item-active {
+  background-color: var(--theme);
+  border-color: var(--theme);
+}

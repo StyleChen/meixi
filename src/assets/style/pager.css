@@ -1,0 +1,72 @@
+:root {
+  --pager-item-size: calc(34 / 12 * 1em);
+  --table-border: 1px solid #ddd;
+}
+
+.pager {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: calc(40 / 12 * 1em);
+  font-size: calc(12 / 16 * 1rem);
+}
+
+.pager__list {
+  display: flex;
+}
+
+.pager__item {
+  display: block;
+  width: var(--pager-item-size);
+  height: var(--pager-item-size);
+  line-height: var(--pager-item-size);
+  text-align: center;
+}
+
+a.pager__item {
+  border: 1px solid var(--grey-lightest);
+}
+
+span.pager__item::before {
+  content: "···";
+  color: #bbb;
+  font-size: 1rem;
+}
+
+a.pager__item--active {
+  border-color: var(--theme);
+  background-color: var(--theme);
+  color: #fff;
+}
+
+.pager__item:first-child {
+  margin-right: calc(5 / 12 * 1em);
+}
+
+.pager__item + .pager__item {
+  margin-left: calc(2 / 12 * 1em);
+}
+
+.pager__item:last-child {
+  margin-left: calc(5 / 12 * 1em);
+}
+
+.pager__goto {
+  display: flex;
+  align-items: center;
+  margin-left: calc(28 / 12 * 1em);
+}
+
+.pager__goto__input {
+  width: calc(45 / 12 * 1em);
+  height: var(--pager-item-size);
+  border: 1px solid var(--grey-lightest);
+  padding-left: 1em;
+  margin: 0 calc(5 / 12 * 1em);
+}
+
+.pager__goto__btn {
+  min-width: calc(56 / 12 * 1em);
+  height: var(--pager-item-size);
+  margin-left: calc(12 / 12 * 1em);
+}
